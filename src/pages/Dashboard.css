@@ -1,0 +1,23 @@
+.quick-access {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.quick-btn {
+  background: #38bdf8;
+  color: #fff;
+  padding: 1.2rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(30,41,59,0.08);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.quick-btn:hover {
+  background: #0ea5e9;
+  transform: translateY(-2px) scale(1.03);
+} 
