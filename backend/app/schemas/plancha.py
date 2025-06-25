@@ -14,12 +14,14 @@ class PlanchaBase(BaseModel):
     alto: int
     fecha_ingreso: date
     estado: EstadoPlancha = EstadoPlancha.disponible
+    es_sobrante: bool = False
 
 class PlanchaCreate(PlanchaBase):
     pass
 
 class PlanchaOut(PlanchaBase):
     id: int
+    es_sobrante: bool
 
     class Config:
         orm_mode = True
@@ -29,4 +31,5 @@ class PlanchaUpdate(BaseModel):
     ancho: Optional[int] = None
     alto: Optional[int] = None
     fecha_ingreso: Optional[date] = None
-    estado: Optional[EstadoPlancha] = None 
+    estado: Optional[EstadoPlancha] = None
+    es_sobrante: Optional[bool] = None 

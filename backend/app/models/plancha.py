@@ -15,4 +15,5 @@ class Plancha(Base):
     ancho = Column(Integer, nullable=False)
     alto = Column(Integer, nullable=False)
     fecha_ingreso = Column(Date, nullable=False)
-    estado = Column(Enum(EstadoPlancha), default=EstadoPlancha.disponible, nullable=False) 
+    estado = Column(Enum(EstadoPlancha), default=EstadoPlancha.disponible, nullable=False)
+    es_sobrante = Column(Integer, default=0, nullable=False)  # 0 = False, 1 = True 
